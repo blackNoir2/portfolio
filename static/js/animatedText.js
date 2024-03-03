@@ -205,7 +205,7 @@ class TypeAnimator{
      * @throws {Error} Throws an error if the provided waiting time is not an integer.
      */
     setwaitingTimeBeforeErasingText(waitingTime) {
-        this._isValid(waitingTime, "The value for the waiting time before typing must be an integer");
+        this._isValid(waitingTime, "The value for the waiting time before the text is erase must be an integer");
         this.waitingTimeBeforeErasingText = waitingTime;
     }
 
@@ -215,7 +215,7 @@ class TypeAnimator{
      * @throws {Error} Throws an error if the provided waiting time is not an integer.
      */
     setwaitTimeBeforeCallingNextPhrase(waitingTime) {
-        this._isValid(waitingTime, "The value for the waiting time after typing must be an integer");
+        this._isValid(waitingTime, "The value for the waiting time before the next phrase is called must an integer");
         this.waitTimeBeforeCallingNextPhrase = waitingTime;
     }
 
