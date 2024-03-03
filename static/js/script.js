@@ -3,7 +3,7 @@ import { TypeAnimator } from "./animatedText.js";
 
 
 function displayAnimatedText() {
-    const phrases = ["I am a web developer",
+    const phrases = ["I am a web and Full stack developer",
                      "I am problem solver", 
                      "I am a proficient in HTML",
                      "I am proficient in JS",

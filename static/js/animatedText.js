@@ -176,7 +176,7 @@ class TypeAnimator{
      * @throws {Error} Throws an error if the identifier does not start with '.' or '#' or if no element is found matching the selector.
      */
     setTextToTypeCssSelector(identifier) {
-        if (!identifier.startsWith(".") || !identifier.startsWith("#")) {
+        if (!identifier.startsWith(".") && !identifier.startsWith("#")) {
             throw new Error("The identifier must start with a '.' (class) or '#' (id).");
         }
 
