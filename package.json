@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-builder",
+  "version": "1.0.0",
+  "description": "Description: A versatile package that organizes and presents your projects in an elegant gallery format.",
+  "type": "module",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "node tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackNoir2/portfolio.git"
+  },
+  "author": "Egbie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackNoir2/portfolio/issues"
+  },
+  "homepage": "https://github.com/blackNoir2/portfolio#readme",
+  "devDependencies": {
+    "node": "^21.6.2"
+  }
+}
