@@ -9,8 +9,10 @@
 }
 
 :root {
-    --font-size-lg : 100px;
+    --font-size-lg : 70px;
     --font-size-sm : 25px;
+
+    --dark-red: #5a0e0;
 }
 
 
@@ -240,6 +242,16 @@ body {
 .color-blue {
     color: rgb(4, 4, 57);
 }
+
+.color-white {
+  color: white;
+}
+
+
+.color-red {
+  color: var(--dark-red);
+}
+
   /* Sections */
 
   /* The call to action section */
@@ -287,7 +299,7 @@ body {
 
   /* The image contained with the call to action section */
   .call-to-action-img {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
 
@@ -295,17 +307,15 @@ body {
 
  
   #animated-text {
+    color: rgb(36, 6, 80);
     display: inline-block;
+    font-weight: bolder;
     overflow: hidden;
     font-size: var(--font-size-sm);
     white-space: nowrap;
     
 }
 
-@keyframes typing {
-    0% { width: 0; }
-    100% { width: 100%; }
-} 
 
 
 

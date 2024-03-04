@@ -65,8 +65,6 @@
  */
 
 
-
-
 /**
  * Represents a TypeAnimator for animating text.
  * @class
@@ -75,15 +73,15 @@ class TypeAnimator{
     
     constructor() {
         
-        this._animatedTextElement             = null;
-        this.phrasesArray                     = null;
         this._index                           = 0;
+        this.eraseSpeed                       = 50;
         this.typingSpeed                      = 100; 
         this.waitingTimeBeforeErasingText     = 3000; 
         this.waitTimeBeforeCallingNextPhrase  = 1000; 
-        this.eraseSpeed                       = 50; 
         this._typingInterval                  = null;
         this._erasingInterval                 = null;
+        this._animatedTextElement             = null;
+        this.phrasesArray                     = null;
     }
 
     /**
@@ -176,7 +174,7 @@ class TypeAnimator{
      * @throws {Error} Throws an error if the identifier does not start with '.' or '#' or if no element is found matching the selector.
      */
     setTextToTypeCssSelector(identifier) {
-        if (!identifier.startsWith(".") && !identifier.startsWith("#")) {
+        if (!(identifier.startsWith(".") || identifier.startsWith("#"))) {
             throw new Error("The identifier must start with a '.' (class) or '#' (id).");
         }
 
@@ -199,6 +197,17 @@ class TypeAnimator{
         this.typingSpeed = speed;
     }
 
+     /**
+     * Sets the deleting speed for the text animation.
+     * @param {number} speed - The typing speed in milliseconds per character.
+     * @throws {Error} Throws an error if the provided speed is not an integer.
+     */
+     setErasingSpeed(speed) {
+        this._isValid(speed, "The value for the speed entered must be an integer");
+        this.eraseSpeed = speed;
+    }
+
+
     /**
      * Sets the waiting time before deleting the text.
      * @param {number} waitingTime - The waiting time in milliseconds.
@@ -218,7 +227,6 @@ class TypeAnimator{
         this._isValid(waitingTime, "The value for the waiting time before the next phrase is called must an integer");
         this.waitTimeBeforeCallingNextPhrase = waitingTime;
     }
-
   
     /**
      * Checks if the value is a number.
