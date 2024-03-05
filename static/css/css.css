@@ -338,15 +338,11 @@ nav .container {
   position: absolute;
   top: 10px; 
   right: 90px;
-  width: 750px;
+  width: 740px;
 }
 
 
   
-
-
-
- 
 #animated-text {
 
   color: var(--dark-blue2);
